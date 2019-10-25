@@ -15,7 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailPage {
 
+  note;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.note = this.navParams.get ('noteParam');
+    console.log ("Na DetailPage", this.note);
   }
 
   ionViewDidLoad() {

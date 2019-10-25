@@ -32,12 +32,13 @@ export class HomePage {
   //injeção de dependência
   //é um tipo de inversão de controle
   constructor( public navCtrl: NavController) {
-     
+
   }
 
   
 
   onItemClick (note){
-    console.log ("dentro do itemClick", note);  
+    //console.log ("dentro do itemClick", note);
+    this.navCtrl.push ('DetailPage', {noteParam: note});  
   }
 }
